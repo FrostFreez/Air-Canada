@@ -1,0 +1,233 @@
+:root {
+    --bc: #DC143C;
+    --font: black;
+    --main-bc: white;
+  }
+*{
+    color: var(--font);
+    font-family: FontAwesome;
+    transition: 0.4s;
+    margin: 0;
+    padding: 0;
+}
+body{
+    margin: 0;
+}
+#logo, .bars{
+    font-size: 50px;
+    margin: 0 50px;
+}
+#logo{
+  height: 80%;
+}
+.header{
+    position: fixed;
+    top: 0;
+    background-color: var(--bc);
+    height: 15vh;
+    width: 100vw;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    box-sizing: border-box;
+    z-index: 3;
+}
+.links{
+    position: fixed;
+    top: 0vh;
+    background-color: var(--bc);
+    color: black;
+    height: 15vh;
+    width: 100vw;
+    flex-wrap: wrap;
+    flex-direction: column;
+    box-sizing: border-box;
+    display: flex;
+    justify-content: space-evenly;
+    z-index: 2;
+    color: black;
+}
+.links h2{
+    height: 48%;
+    width: 45%;
+    margin: auto;
+}
+.links h2 a{
+    color: black;  
+}
+.links h2 a span{
+  color: black;  
+}
+.links h2:last-of-type{
+    justify-content: end;
+}
+.bar1, .bar2, .bar3 {
+    width: 35px;
+    height: 5px;
+    background-color: black;
+    margin: 6px 0;
+  }
+  
+  .change .bar1 {
+    transform: translate(0, 11px) rotate(-45deg);
+  }
+  
+  .change .bar2 {opacity: 0;}
+  
+  .change .bar3 {
+    transform: translate(0, -11px) rotate(45deg);
+}
+#dayNight::after{
+  content: '\f042';
+  color: black;
+}
+#credits::after{
+  content: "\f249";
+  color: black;
+}
+#dayNight, #credit{
+  text-align: end;
+}
+.rest{
+  background-color: var(--main-bc);
+  margin-top: 15vh;
+  z-index: -10;
+  width: 100%;
+  height: 85vh;
+  grid-template-rows: 50% 50%;
+  grid-template-columns: 50% 50%;
+  display: grid;
+  grid-template-areas:
+    'person ranking'
+    'pass pass';
+}
+.person{
+  position: relative;
+  grid-area: person;
+  width: 140%;
+  z-index: 1;
+  height: 140%;
+  grid-template-rows: 50% 50%;
+  grid-template-columns: 50% 50%;
+  display: grid;
+  grid-template-areas:
+    'qualities photo'
+    'qualities description';
+}
+.ranking{
+  position: relative;
+  left: 40%;
+  height: 140%;
+  width: 60%;
+  grid-area: ranking;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+}
+.ranked{
+  width: 80%;
+  height: 50px;
+  background-color: var(--main-bc);
+  display: flex;
+  margin: 0;
+}
+.rank-img{
+  height: 100%;
+}
+.rank-name{
+  color: var(--font);
+  display: flex;
+  align-items: center;
+  margin-left: 10px;
+}
+.ranking-buttom{
+  position: fixed;
+  transform: rotate(-90deg);
+  left: 70.5%;
+  width: 30px;
+  height: 30px;
+  background-color: var(--bc);
+  color: black;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.up{
+  top: 41.3%;
+}
+.down{
+  top: 45.3%;
+}
+.pass{
+  position: relative;
+  top: 40%;
+  height: 60%;
+  grid-area: pass;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.pass h2{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 5rem;
+}
+.pass-buttom{
+  width: 8vw;
+  height: 8vw;
+  background-color: var(--bc);
+  color: black;
+  margin: 0 10px;
+}
+#index{
+  color: var(--font);
+}
+.qualities{
+  grid-area: qualities;
+  height: 100%;
+  width: 84%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+}
+.qualities h3{
+  margin: auto;
+  color: var(--font);
+  font-size: 2rem;
+  font-weight: bolder;
+}
+.photo{
+  position: relative;
+  left: -16%;
+  grid-area: photo;
+  height: 140%;
+  width: 116%;
+  display: flex;
+  justify-content: center;
+}
+.photo img{
+  height: 90%;
+  margin: auto;
+  border: 5px solid var(--bc);
+  border-radius: 50%;  
+}
+.description{
+  position: relative;
+  top: 40%;
+  left: -16%;
+  grid-area: description;
+  height: 60%;
+  width: 116%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.description h2{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 4rem;
+  color: var(--font);
+}

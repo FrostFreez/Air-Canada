@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <title>School guide</title>
+        <link rel="stylesheet" href="styles.css" />
+        <script type="text/javascript" src="action.js"></script>
+        <link 
+            href="http://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.css" 
+            rel="stylesheet"  type='text/css'>
+        <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
+    </head>
+    <body onload="changePerson(0); ranking()">
+        <div>
+            <div class="header">
+                <img id="logo" src="https://imgur.com/K6zqxhD.png" />
+                <div class="bars" onclick="upDown(this)" onmouseover="style='cursor: pointer; color: black;'">
+                    <div class="bar1"></div>
+                    <div class="bar2"></div>
+                    <div class="bar3"></div>
+                </div>
+            </div>
+            <div class="links" id="links">
+                <h2 id="youtube"><a href="https://www.youtube.com/user/aircanada"><span class="fa fa-brands fa-youtube"></span> YOUTUBE</a></h2>
+                <h2 id="instagram"><a href="https://www.instagram.com/aircanada"><span class="fa fa-brands fa-instagram"></span> INSTAGRAM</a></h2>
+                <h2 id="dayNight" onclick="dayNight()" onmouseover="style='cursor: pointer;'"></h2>
+                <h2 id="credit"><a id="credits" href="https://www.instagram.com/josu169"></a></h2>
+            </div>
+        </div>
+        <div class="rest">
+            <div class="person">
+                <div class="qualities" id="qualities"></div>
+                <div class="photo"><img id="photo"/></div>
+                <div class="description"><h2 id="descripition"></h2></div>
+            </div>
+            <div id="ranking" class="ranking">
+                <h2 class="ranking-buttom down" onclick="changePosition(1)" onmouseover="style='cursor: pointer;'"><</h2>
+                <h2 class="ranking-buttom up" onclick="changePosition(-1)" onmouseover="style='cursor: pointer;'">></h2>
+            </div>
+            <div class="pass">
+                <h2 class="pass-buttom" onclick="changePerson(-1)" onmouseover="style='cursor: pointer;'"><</h2>
+                <h2 id="index"></h2>
+                <h2 class="pass-buttom" onclick="changePerson(1)" onmouseover="style='cursor: pointer;'">></h2>
+            </div>
+        </div>
+    </body>
+</html>
